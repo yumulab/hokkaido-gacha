@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.gacha-container {
+    background-color: #ffffff;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+#gachaCount,#sleepHours {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#gachaButton {
+    width: 80%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#gachaButton:hover {
+    background-color: #45a049;
+}
+
+#result img {
+    width: 100%;
+    max-width: 250px;
+    margin-top: 20px;
+}
+
+/* 最初に戻るボタンのスタイル */
+.reset-button {
+    width: 80%;
+    padding: 10px;
+    background-color: #008CBA; /* ボタンの背景色 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* マージンで周りの要素との距離を設定 */
+}
+
+.reset-button:hover {
+    background-color: #007B9E; /* ホバー時の背景色 */
+}
+
+/* フラッシュエフェクトのスタイル */
+.flash-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1000; /* 他の要素より上に表示 */
+}
