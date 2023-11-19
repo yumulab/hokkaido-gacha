@@ -42,12 +42,6 @@ h1 {
     background-color: #45a049;
 }
 
-#result img {
-    width: 100%;
-    max-width: 250px;
-    margin-top: 20px;
-}
-
 /* 最初に戻るボタンのスタイル */
 .reset-button {
     width: 80%;
@@ -75,4 +69,39 @@ h1 {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     z-index: 1000; /* 他の要素より上に表示 */
+}
+
+/* キャラクター画像のスタイル */
+#result img {
+    width: 100%; /* 画像の幅を適切に調整 */
+    max-width: 200px; /* 最大幅を設定 */
+    height: auto;
+    border-radius: 10px; /* 画像の角を丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    margin-bottom: 10px; /* 下部のマージン */
+}
+
+/* ガチャ結果のコンテナスタイル */
+.gacha-item {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.gacha-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* 市町村名のスタイル */
+.gacha-item .town-name {
+    font-family: 'Arial', sans-serif; /* シンプルでモダンなフォント */
+    font-size: 32px; /* より大きなフォントサイズ */
+    font-weight: bold; /* 太字で強調 */
+    color: #333; /* 濃い文字色で読みやすく */
+    margin-top: 2px;
 }

@@ -211,6 +211,9 @@ document.getElementById('gachaButton').addEventListener('click', function() {
 
     for (let i = 0; i < count; i++) {
         setTimeout(() => {
+            const gachaItem = document.createElement('div');
+            gachaItem.classList.add('gacha-item');
+
             // ランダムに市町村コードを選択
             const randomIndex = Math.floor(Math.random() * Object.keys(townMap).length);
             const townCode = Object.keys(townMap)[randomIndex];
@@ -223,11 +226,13 @@ document.getElementById('gachaButton').addEventListener('click', function() {
 
             // 市町村名の表示
             const townNameElement = document.createElement('div');
+            townNameElement.classList.add('town-name'); // 追加したクラスを適用
             townNameElement.textContent = townName;
 
             // 画像と市町村名を結果コンテナに追加
-            resultContainer.appendChild(characterImage);
-            resultContainer.appendChild(townNameElement);
+            gachaItem.appendChild(characterImage);
+            gachaItem.appendChild(townNameElement);
+            resultContainer.appendChild(gachaItem);
         }, 1000 * i);
     }
 
@@ -246,14 +251,14 @@ document.getElementById('gachaButton').addEventListener('click', function() {
     }, 500);
 
     // 最後のガチャが終わった後の処理
+    // 最初に戻るボタンの処理を追加
     setTimeout(() => {
-        // 最初に戻るボタンを追加
         const resetButton = document.createElement('button');
         resetButton.textContent = '最初に戻る';
-        resetButton.classList.add('reset-button'); // スタイルクラスを追加
-        resetButton.addEventListener('click', function () {
-            document.getElementById('gachaCount').value = '';
-            resultContainer.innerHTML = '';
+        resetButton.classList.add('reset-button');
+        resetButton.addEventListener('click', function() {
+            document.getElementById('sleepHours').value = ''; // 睡眠時間入力をクリア
+            resultContainer.innerHTML = ''; // ガチャの結果をクリア
         });
         resultContainer.appendChild(resetButton);
     }, 1000 * count);
