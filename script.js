@@ -179,8 +179,6 @@ const townMap = {
     16942: "羅臼町"
 };
 
-
-
 document.getElementById('gachaButton').addEventListener('click', function() {
     const sleepHours = parseInt(document.getElementById('sleepHours').value);
     
@@ -200,17 +198,24 @@ document.getElementById('gachaButton').addEventListener('click', function() {
     }
 
 
-    // const count = parseInt(document.getElementById('gachaCount').value);
-    // if (isNaN(count) || count <= 0) {
-    //     alert('有効な回数を入力してください');
-    //     return;
-    // }
 
     const resultContainer = document.getElementById('result');
     resultContainer.innerHTML = '';
 
     for (let i = 0; i < count; i++) {
         setTimeout(() => {
+            // フラッシュエフェクトを表示
+            const flash = document.createElement('div');
+            flash.classList.add('flash-effect');
+            document.body.appendChild(flash);
+
+            // フラッシュエフェクトの表示と削除
+            flash.style.opacity = '1'; // フラッシュ表示
+            setTimeout(() => {
+                flash.style.opacity = '0'; // フラッシュ消去
+                document.body.removeChild(flash); // フラッシュエレメント削除
+            }, 250); // エフェクトの持続時間を250ミリ秒に短縮
+
             const gachaItem = document.createElement('div');
             gachaItem.classList.add('gacha-item');
 
@@ -237,18 +242,18 @@ document.getElementById('gachaButton').addEventListener('click', function() {
     }
 
     // フラッシュエフェクトを表示
-    const flash = document.createElement('div');
-    flash.classList.add('flash-effect');
-    document.body.appendChild(flash);
+    // const flash = document.createElement('div');
+    // flash.classList.add('flash-effect');
+    // document.body.appendChild(flash);
 
-    setTimeout(() => {
-        flash.style.opacity = '1'; // フラッシュ表示
-    }, 100);
+    // setTimeout(() => {
+    //     flash.style.opacity = '1'; // フラッシュ表示
+    // }, 100);
 
-    setTimeout(() => {
-        flash.style.opacity = '0'; // フラッシュ消去
-        document.body.removeChild(flash); // フラッシュエレメント削除
-    }, 500);
+    // setTimeout(() => {
+    //     flash.style.opacity = '0'; // フラッシュ消去
+    //     document.body.removeChild(flash); // フラッシュエレメント削除
+    // }, 500);
 
     // 最後のガチャが終わった後の処理
     // 最初に戻るボタンの処理を追加
