@@ -4,6 +4,13 @@ body {
     background-color: #f0f0f0;
 }
 
+/* 見出しのスタイル調整 */
+h1 {
+    font-size: 36px; /* フォントサイズの調整 */
+    text-align: center; /* 中央揃え */
+    margin-bottom: 20px; /* 下部のマージン */
+}
+
 .gacha-container {
     background-color: #ffffff;
     margin: 50px auto;
