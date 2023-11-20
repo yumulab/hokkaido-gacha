@@ -28,18 +28,23 @@ h1 {
     border: 1px solid #ddd;
 }
 
+/* ガチャを開始ボタンのスタイル */
 #gachaButton {
-    width: 80%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 15px 30px;
+    background-color: #FFD700; /* 金色の背景 */
+    color: #000; /* テキストの色を黒または暗めの色に */
+    font-size: 18px;
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius:30px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #gachaButton:hover {
-    background-color: #45a049;
+    background-color: #FFC107; /* ホバー時に少し明るい金色に */
+    transform: scale(1.05);
 }
 
 /* 最初に戻るボタンのスタイル */
@@ -101,8 +106,8 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
-    opacity: 80;
+    background-color: #FFD700;
+    opacity: 0.1;
     transition: opacity 250ms ease-in-out;
     z-index: 1000; /* 他の要素より上に表示 */
 }
