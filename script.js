@@ -184,6 +184,7 @@ document.getElementById('gachaButton').addEventListener('click', function() {
     
     // 睡眠時間に応じたガチャの回数を決定
     let count;
+    /*
     if (sleepHours <= 4) {
         count = 1;
     } else if (sleepHours === 5) {
@@ -196,8 +197,8 @@ document.getElementById('gachaButton').addEventListener('click', function() {
         alert('有効な睡眠時間を入力してください');
         return;
     }
-
-
+    */
+    count = sleepHours;
 
     const resultContainer = document.getElementById('result');
     resultContainer.innerHTML = '';
